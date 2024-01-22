@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. On importe le CDN css de BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Cours/style.css">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+
+    <!-- 3. Les containers (largeur fixe réduite et un qui prend toute la largeur de l'écran) -->
+    <div class="container" style = "background-color: red;">
+        <h1>Cours BOOTSTRAP</h1>
+        <p>Premier paragraphe</p>
+    </div>
+    <div class="container-fluid" style = "background-color: red;">
+        <h1>Cours BOOTSTRAP</h1>
+        <p>Premier paragraphe</p>
+    </div>
+
+        <!-- 4. GRID System -->
+        <div class="container my-5">
+            <div class="row">
+                <div class=" col-md-6 col-lg-4 col-xl-3 col-xxl-2" id="block1" style="border: 1px solid red">
+                    <h2>
+                        Block1
+                    </h2>
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-3 col-xxl-2" id="block2" style="border: 1px solid black">
+                    <h2>
+                        Block2
+                    </h2>
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-3 col-xxl-2" id="block3" style="border: 1px solid blue">
+                    <h2>
+                        Block3
+                    </h2>
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-3 col-xxl-2" id="block4" style="border: 1px solid green">
+                    <h2>
+                        Block4
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Les typos, les textes, les couleurs -->
+        <p class="text-primary">Paragraphe Bootstrap</p>
+
+        <!-- 6. Les formulaires -->
+        <div class="container">
+            <form action="POST">
+                <div>
+                    <label for="inputEmail" class="form-label">Adresse email</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="d-none form-text">Champs de formulaire email (Nous ne dévoilerons jamais vos données)</div>
+                </div>
+                <div class="mt-2">
+                    <!-- mt-1: 0.25rem; mt-2: 0.5rem; mt-3: 1rem; mt-4: 1.5rem; mt-5: 3rem (1rem = 16px) -->
+                    <label for="inputPassword" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+                <div class="mt-2 mb-2">
+                    <input type="checkbox" class="form-check-input" id="inputCheck">
+                    <label for="inputCheck" class="form-check-label">Acceptez les conditions générales</label>
+                </div>
+                <button class="btn btn-primary" type="submit">S'inscrire</button>
+            </form>
+        </div>
+
+    <!-- 7. Les images -->
+    <div class="w-100">
+        <img src="/Cours/Images/081eaf9f83fcd8fc3dd77978c5db62b7.webp" alt="Image Yu-Gi-Oh!" class="img-fluid">
+    </div>
+
+    <!-- 8. Les tooltips (avec code js) -->
+    <div class="container my-5">
+        <button class="btn btn-primary" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Au dessus">Tooltip on top
+        </button>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="A droite">Tooltip on right
+        </button>
+        <button class="btn btn-success" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="En bas">Tooltip on bottom
+        </button>
+        <button class="btn btn-danger" type="button" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="A gauche">Tooltip on left
+        </button>
+    </div>
+
+    <!-- 2. On importe le CDN js de BS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="/Cours/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- 1.1. Création de la navbar (finalement c'est un container donc une div qui contient tous les éléments de la barre de navigation, le nom de la div pour une navbar c'est nav) raccourci emmet: nav.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light + entrée -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- 1.5. Le button hamburger : button.navbar-toggler.ms-auto-->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- (BS a une classe navbar-toggler-icon qui contient déjà (dans le fichier min.css de BS) une image des trois traits qui compose le bouton hamburger) -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 1.6. (enrobage de notre liste d'item de navigation avec une div qui va permettre de collapser (ouvrir/derouler) notre menu)-->
+        <div class="collapse navbar-collapse" id="navbarToggler">
+
+            <!-- 1.2. la liste des items de navigation : ul.navbar-nav.w-100.d-flex.justify-content-center + E -->
+            <ul class="navbar-nav w-100 justify-content-center align-items-center">
+                <!-- 1.3. les lignes : li.nav-item*5 +E -->
+                <!-- 1.4. On sélectionne tous les espaces entre le chevron fermant de la balise ouvrante et le chevron ouvrant de la balise fermante des li -->
+                <li class="nav-item"><a href="" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2.1 Section accueil du portfolio : .bg-dark.text-white.d-flex.flex-column.align-items-center.text-center.mt-5.p-3 + E -->
+    <div class="bg-dark text-white d-flex align-items-center h-75 flex-column text-center mt-5 p-3">
+
+        <!-- 2.2 on crée 2 div : .mt-auto (Permet de dispatcher l'espace libre restant de la div parente entre les deux div enfants)-->
+        <div class="mt-auto">
+
+            <!-- 2.3 Ici créer le css de la classe imgProfil -> voir style.css -->
+            <img src="ressource/man.svg" alt="image du dev" class="imgProfil">
+            <h1>Salut, moi c'est Manu!</h1>
+            <p>Développeur fullstack, spécialisé back mais bootstrap de temps en temps</p>
+            <a href="" class="btn btn-secondary btn-lg">En savoir plus</a>
+        </div>
+        <div class="mt-auto">
+            <p>Lorem ipsum</p>
+        </div>
+    </div>
+
+    <!-- 3.1 Section portfolio -->
+    <section class="py-5" id="portfolio">
+        <h2 class="text-uppercase text-center mb-5">Portfolio</h2>
+        <div class="container">
+            <!-- 3.2 row-cols est une classe BS qui permet de définir directement dans une row le nombre de colonne que l'on veut en fonction de la taille de l'écran (ex pour row-cols-1 nous aurons une seule colonne dès le mode mobile et pour toutes les autres largeurs, si l'on ajoute row-cols-md-2, nous aurons deux colonnes dès le mode tablette) -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <!-- 3.3 Classe card BS -> Voir la doc -->
+                    <div class="card">
+                        <img src="ressource/js.jpg" class="card-img-top" alt="image du site web Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Javascript moderne</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-outline-secondary btn-sm me-2">Code Source</a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/ReactTwitch.png" class="card-img-top" alt="image du site web Twitch">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloner Twitch avec React</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/animation.jpg" class="card-img-top" alt="image du site web UI/UX">
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/MeteoApp.png" class="card-img-top" alt="image du site web Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Application météo</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/SiteMenu.png" class="card-img-top" alt="image du site web Responsive">
+                        <div class="card-body">
+                            <h5 class="card-title">Design Responsive</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/SiteResPic.jpg" class="card-img-top" alt="image du site web Particulier">
+                        <div class="card-body">
+                            <h5 class="card-title">Site pour particulier</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/Visu.jpg" class="card-img-top" alt="image du site web visualisation">
+                        <div class="card-body">
+                            <h5 class="card-title">Visualisation des données</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/grid.jpg" class="card-img-top" alt="image du site web Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Grille CSS</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="ressource/bulma.jpg" class="card-img-top" alt="image du site web Bootstrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Framework Bulma</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam mollitia molestias ipsum adipisci maxime?</p>
+                            <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Code Source</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.1 Section A propos -->
+    <section class="bg-dark text-white" id="about">
+        <div class="container py-5">
+            <h2 class="text-center text-uppercase">A propos</h2>
+            <div class="row g-3 mt-3">
+                <div class="col-lg-4 ms-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam laoreet purus. Mauris laoreet sem at pharetra sollicitudin. Duis aliquam a ante vel convallis. Nullam in diam in sem cursus vehicula. Nulla consequat quis leo nec laoreet. Donec tincidunt velit non massa ornare luctus
+                </div>
+                <div class="col-lg-4 me-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam laoreet purus. Mauris laoreet sem at pharetra sollicitudin. Duis aliquam a ante vel convallis. Nullam in diam in sem cursus vehicula. Nulla consequat quis leo nec laoreet. Donec tincidunt velit non massa ornare luctus
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-outline-light" href="#">Contactez-moi</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mb-5" id="services">
+        <h2 class="text-center text-uppercase my-5">Mes services</h2>
+        <!-- 5.1 Création d'une row qui va contenir nos 3 colonnes en d-flex pour aligner les éléments qui seront séparés de manière centrée (de base l'html est instancié en display block (d-block) donc les éléments sont empliés les uns sur les autres. Avec d-flex, on change cette propriété qui équivaut à un display in-line) -->
+        <div class="row d-flex justify-content-center ">
+            <!-- 5.2 on passe chaque col aussi en d-flex pour pouvoir manipuler les éléments, ici on veut avoir le contenu de chaque col de manière empilée donc on ajoute la classe flex-column et pour justifier le tout de maniere centré, ici on utilise align-items-center -->
+            <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <img src="ressource/vue.png" alt="" width="120">
+                <h2 class="text-center">Vue</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, officiis reiciendis. Facilis, architecto nemo maxime molestias sed nam odit saepe quisquam corporis, quibusdam in nihil dolores ab, consequatur distinctio aspernatur!</p>
+                <!-- 5.3 Insertion des attributs data-bs-toggle et target sur le bouton pour ouvrir une modal -->
+                <a href="" class="btn btn-secondary" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Voir mes projets</a>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <img src="ressource/angular-icon.svg" alt="" width="120">
+                <h2 class="text-center">Angular</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, officiis reiciendis. Facilis, architecto nemo maxime molestias sed nam odit saepe quisquam corporis, quibusdam in nihil dolores ab, consequatur distinctio aspernatur!</p>
+                <a href="" class="btn btn-secondary" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Voir mes projets</a>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <img src="ressource/React.png" alt="" width="140">
+                <h2 class="text-center">React</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, officiis reiciendis. Facilis, architecto nemo maxime molestias sed nam odit saepe quisquam corporis, quibusdam in nihil dolores ab, consequatur distinctio aspernatur!</p>
+                <a href="" class="btn btn-secondary" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Voir mes projets</a>
+            </div>
+        </div>
+        <!-- 5.4 Modal BS associée au 1er bouton qui a pour target l'id de cette modal -->
+        <!-- Modal Vue-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Angular -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptate deleniti id aspernatur adipisci suscipit a iure est hic veritatis. Harum omnis sequi quisquam accusamus, vitae quia asperiores iste ut!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 6.1 Formulaire de contact -->
+    <section class="bg-dark text-white" id="contact">
+        <div class="container">
+            <h2 class="text-center">Restons en contact</h2>
+            <form action="https://www.localhost/nomdetaroute" method="post">
+                <div class="row d-flex g-3">
+                    <div class="col-lg-6">
+                        <label for="form_firstname">Prénom *</label>
+                        <input type="text" id="form_firstname" class="form-control" name="firstnameForm">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="form_lastname">Nom *</label>
+                        <input type="text" id="form_lastname" class="form-control" name="lastnameForm">
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="form_email">Email *</label>
+                        <input type="email" name="emailForm" id="form_email" placeholder="indiquer un email valide" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="form_message">Message *</label>
+                        <textarea name="messageForm" class="form-control" id="form_message" rows="10"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success mb-5">Envoyer ma demande de contact</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
